@@ -393,7 +393,7 @@ public class nes extends JavaPlugin {
         UberItems.putItem("souls_rebound", new souls_rebound(Material.BOW, "Souls Rebound", UberRarity.EPIC,
                 false, false, false,
                 Collections.emptyList(), null));
-
+        
         UberItems.putItem("aspect_of_the_dragons", new aspect_of_the_dragons(Material.DIAMOND_SWORD, "Aspect of the Dragons", UberRarity.LEGENDARY,
                 false, false, false,
                 Collections.singletonList(new UberAbility("Dragon Rage", AbilityType.RIGHT_CLICK, "All Monsters and Players /newline in front of you take " + ChatColor.GREEN + "4" + ChatColor.GRAY + " damage. Hit monsters take large knockback.")),
@@ -402,8 +402,8 @@ public class nes extends JavaPlugin {
         UberItems.putItem("creative_mind", new creative_mind(Material.PAINTING, "Creative Mind", UberRarity.SPECIAL,
                 false, false, false,
                 Collections.emptyList(), null));
-
-        // AMROR SETS
+        
+        // ARMOR SETS
         UberItems.putUberArmorSet(cactus_armor.class, "Cactus", UberRarity.COMMON, UberItems.ArmorType.LEATHER, Color.fromRGB(0, 255, 0),
                 Collections.singletonList(new UberAbility("Deflect", AbilityType.FULL_SET_BONUS, "Rebound" + ChatColor.GREEN + " 33.3% " + ChatColor.GRAY + "of the damage you take back at your enemy.")),
                 null, null,null,null,
@@ -622,8 +622,10 @@ public class nes extends JavaPlugin {
                         new ItemStack(Material.AIR),
                         UberItems.getMaterial("null_sphere").makeItem(32),
                         new ItemStack(Material.AIR)), true, 1)));
-
+        UberItems.putMaterial("ancient_rose",new UberMaterial(Material.POPPY,"Ancient Rose",
+               UberRarity.RARE,
         UberItems.putMaterial("golden_powder", new UberMaterial(Material.GLOWSTONE_DUST, "Golden Powder",
                 UberRarity.EPIC, true, true, false, "", null));
+        
     }
 }
